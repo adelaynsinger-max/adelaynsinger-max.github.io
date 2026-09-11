@@ -1,0 +1,16 @@
+VERSION = "2.0.0"
+
+ACCOUNTS = [
+  "GC4JKLX2BSIVAKATWHFXY6JV67IDX6SFNLMCLHOI3UIYVVTZNDOV5HUN"
+]
+
+[DOCUMENTATION]
+ORG_NAME = "FoxXlm"
+ORG_URL = "https://adelaynsinger-max.github.io/FoxXlm/"
+
+[[CURRENCIES]]
+code = "FOXXLM"
+issuer = "GC4JKLX2BSIVAKATWHFXY6JV67IDX6SFNLMCLHOI3UIYVVTZNDOV5HUN"
+name = "FoxXlm"
+desc = "FoxXlm is a Stellar-based digital asset project."
+image = "https://adelaynsinger-max.github.io/FoxXlm/logo.png"
