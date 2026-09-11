@@ -1,116 +1,414 @@
-<div class="card">
-        <div class="card-icon">🌐</div>
-        <h3>Open Project</h3>
-        <p>Project information is designed to be publicly accessible.</p>
-      </div>
-    </div>
-  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoxXlm | Built on Stellar</title>
+  <meta name="description" content="FoxXlm is a community-driven token project built on the Stellar network.">
 
-  <!-- TOKENOMICS -->
-  <section id="tokenomics">
-    <div class="section-title">
-      <h2>Tokenomics</h2>
-      <p>FoxXlm token structure</p>
-    </div>
-
-    <div class="tokenomics">
-      <div class="stat">
-        <strong>FoxXlm</strong>
-        <span>Token Symbol</span>
-      </div>
-
-      <div class="stat">
-        <strong>Stellar</strong>
-        <span>Blockchain</span>
-      </div>
-
-      <div class="stat">
-        <strong>1,000,000</strong>
-        <span>Total Issued</span>
-      </div>
-
-      <div class="stat">
-        <strong>Community</strong>
-        <span>Project direction</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ROADMAP -->
-  <section id="roadmap">
-    <div class="section-title">
-      <h2>Roadmap</h2>
-      <p>The FoxXlm journey</p>
-    </div>
-
-    <div class="roadmap">
-      <div class="roadmap-item">
-        <h3>Phase 01 — Foundation</h3>
-        <p>Create the FoxXlm asset, establish the Stellar wallets and prepare the project identity.</p>
-      </div>
-
-      <div class="roadmap-item">
-        <h3>Phase 02 — Website</h3>
-        <p>Launch the official FoxXlm website and publish project information.</p>
-      </div>
-
-      <div class="roadmap-item">
-        <h3>Phase 03 — Community</h3>
-        <p>Grow the Fox Empire community and introduce FoxXlm to new users.</p>
-      </div>
-
-      <div class="roadmap-item">
-        <h3>Phase 04 — Ecosystem</h3>
-        <p>Explore wallets, integrations, liquidity and additional community utilities.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMMUNITY -->
-  <section id="community">
-    <div class="section-title">
-      <h2>Join Fox Empire</h2>
-      <p>Follow the project and become part of the community.</p>
-    </div>
-
-    <div class="buttons">
-      <a href="#" class="button">Telegram</a>
-      <a href="https://github.com/adelaynsinger-max/FoxXlm" target="_blank" class="button secondary">GitHub</a>
-    </div>
-  </section>
-
-  <!-- DISCLAIMER -->
-  <section>
-    <div class="warning">
-      <strong>Important:</strong>
-      FoxXlm is a community project.
-      This website does not promise profits, investment returns, or guaranteed token value.
-      Always verify the correct Stellar asset issuer before sending or receiving tokens.
-    </div>
-  </section>
-
-  <footer>
-    Built with ❤️ for the <span>Fox Empire</span> community on Stellar
-  </footer>
-
-  <!-- Albedo Library -->
-  <script src="https://cdn.jsdelivr.net/npm/@albedo-link/intent@0.12/lib/albedo.intent.js"></script>
-
-  <script>
-    function addFoxToWallet() {
-      albedo.trust({
-        asset_code: "FoxXlm",
-        asset_issuer: "GC4JKLX2BSIVAKATWHFXY6JV67IDX6SFNLMCLHOI3UIYVVTZNDOV5HUN"
-      })
-      .then(function(result) {
-        alert("✅ توکن FoxXlm با موفقیت به کیف‌پول اضافه شد!");
-      })
-      .catch(function(error) {
-        alert("عملیات لغو شد یا خطایی رخ داد.");
-        console.error(error);
-      });
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-  </script>
 
-</body>
-</html>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #070707;
+      color: white;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 7%;
+      background: rgba(7,7,7,0.85);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #242424;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .logo span {
+      color: #ff7900;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ff7900;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: #ff7900;
+      opacity: 0.13;
+      filter: blur(140px);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 850px;
+    }
+
+    .tag {
+      color: #ff8a1a;
+      font-weight: bold;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(65px, 14vw, 150px);
+      line-height: 0.9;
+      margin-bottom: 25px;
+      background: linear-gradient(90deg, #ffffff, #ff7900);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: #aaa;
+      font-size: 20px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      padding: 14px 25px;
+      border-radius: 12px;
+      background: #ff7900;
+      color: black;
+      text-decoration: none;
+      font-weight: 800;
+      transition: 0.2s;
+      cursor: pointer;
+      border: none;
+      font-size: 15px;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid #444;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #888;
+    }
+
+    .token-card {
+      background: linear-gradient(145deg, #131313, #0b0b0b);
+      border: 1px solid #292929;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 0 20px 70px rgba(0,0,0,.4);
+    }
+
+    .token-name {
+      font-size: 36px;
+      font-weight: 900;
+    }
+
+    .token-symbol {
+      display: inline-block;
+      margin-top: 8px;
+      background: #ff7900;
+      color: #111;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-weight: 900;
+    }
+
+    .issuer {
+      margin-top: 25px;
+      padding: 18px;
+      background: #080808;
+      border: 1px solid #292929;
+      border-radius: 12px;
+      word-break: break-all;
+      color: #aaa;
+      font-family: monospace;
+      font-size: 13px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #101010;
+      border: 1px solid #292929;
+      border-radius: 20px;
+      padding: 30px;
+    }
+
+    .card-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #888;
+    }
+
+    .tokenomics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      background: #101010;
+      border: 1px solid #292929;
+      border-radius: 18px;
+      padding: 25px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 30px;
+      color: #ff7900;
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: #888;
+    }
+
+    .roadmap {
+      border-left: 2px solid #ff7900;
+      padding-left: 25px;
+    }
+
+    .roadmap-item {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .roadmap-item::before {
+      content: "";
+      position: absolute;
+      left: -34px;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      background: #ff7900;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #ff7900;
+    }
+
+    .roadmap-item h3 {
+      color: #ff7900;
+    }
+
+    .roadmap-item p {
+      color: #888;
+    }
+
+    .warning {
+      background: #111;
+      border: 1px solid #302820;
+      border-radius: 18px;
+      padding: 25px;
+      color: #999;
+    }
+
+    .warning strong {
+      color: #ff7900;
+    }
+
+    footer {
+      text-align: center;
+      padding: 45px 20px;
+      border-top: 1px solid #222;
+      color: #666;
+    }
+
+    footer span {
+      color: #ff7900;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav div {
+        display: none;
+      }
+
+      .grid,
+      .tokenomics {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 18px;
+      }
+
+      .token-card {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 75px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#" class="logo">🦊 Fox<span>Xlm</span></a>
+    <div>
+      <a href="#token">Token</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#community">Community</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="tag">BUILT ON STELLAR • FOX EMPIRE</div>
+      <h1>FoxXlm</h1>
+      <p>
+        A community-driven token project built on the Stellar network.
+        Fast. Simple. Community focused.
+      </p>
+
+      <div class="buttons">
+        <a href="#token" class="button">Explore FoxXlm</a>
+
+        <button onclick="addFoxToWallet()" class="button secondary">
+          🦊 Add FoxXlm to Wallet
+        </button>
+
+        <a href="https://stellar.expert/explorer/public/asset/FoxXlm-GC4JKLX2BSIVAKATWHFXY6JV67IDX6SFNLMCLHOI3UIYVVTZNDOV5HUN" 
+           target="_blank" 
+           class="button secondary">
+          Stellar Explorer
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOKEN -->
+  <section id="token">
+    <div class="section-title">
+      <h2>FoxXlm Token</h2>
+      <p>Official project information</p>
+    </div>
+
+    <div class="token-card">
+      <div class="token-name">FoxXlm</div>
+      <div class="token-symbol">FoxXlm</div>
+
+      <p style="color:#888;margin-top:20px;">
+        FoxXlm is a community token project operating on the Stellar network.
+      </p>
+
+      <div class="issuer">
+        <strong style="color:#ff7900;">Issuer</strong><br><br>
+        GC4JKLX2BSIVAKATWHFXY6JV67IDX6SFNLMCLHOI3UIYVVTZNDOV5HUN
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section>
+    <div class="section-title">
+      <h2>Why FoxXlm?</h2>
+      <p>The idea behind the project</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Stellar Network</h3>
+        <p>Built on Stellar infrastructure for fast and efficient transactions.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🦊</div>
+        <h3>Fox Empire</h3>
+        <p>Connected to the Fox Empire community and its growing ecosystem.</p>
+              </div>
