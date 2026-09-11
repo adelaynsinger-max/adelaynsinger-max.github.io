@@ -1,0 +1,116 @@
+<div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Open Project</h3>
+        <p>Project information is designed to be publicly accessible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOKENOMICS -->
+  <section id="tokenomics">
+    <div class="section-title">
+      <h2>Tokenomics</h2>
+      <p>FoxXlm token structure</p>
+    </div>
+
+    <div class="tokenomics">
+      <div class="stat">
+        <strong>FoxXlm</strong>
+        <span>Token Symbol</span>
+      </div>
+
+      <div class="stat">
+        <strong>Stellar</strong>
+        <span>Blockchain</span>
+      </div>
+
+      <div class="stat">
+        <strong>1,000,000</strong>
+        <span>Total Issued</span>
+      </div>
+
+      <div class="stat">
+        <strong>Community</strong>
+        <span>Project direction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap">
+    <div class="section-title">
+      <h2>Roadmap</h2>
+      <p>The FoxXlm journey</p>
+    </div>
+
+    <div class="roadmap">
+      <div class="roadmap-item">
+        <h3>Phase 01 — Foundation</h3>
+        <p>Create the FoxXlm asset, establish the Stellar wallets and prepare the project identity.</p>
+      </div>
+
+      <div class="roadmap-item">
+        <h3>Phase 02 — Website</h3>
+        <p>Launch the official FoxXlm website and publish project information.</p>
+      </div>
+
+      <div class="roadmap-item">
+        <h3>Phase 03 — Community</h3>
+        <p>Grow the Fox Empire community and introduce FoxXlm to new users.</p>
+      </div>
+
+      <div class="roadmap-item">
+        <h3>Phase 04 — Ecosystem</h3>
+        <p>Explore wallets, integrations, liquidity and additional community utilities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community">
+    <div class="section-title">
+      <h2>Join Fox Empire</h2>
+      <p>Follow the project and become part of the community.</p>
+    </div>
+
+    <div class="buttons">
+      <a href="#" class="button">Telegram</a>
+      <a href="https://github.com/adelaynsinger-max/FoxXlm" target="_blank" class="button secondary">GitHub</a>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section>
+    <div class="warning">
+      <strong>Important:</strong>
+      FoxXlm is a community project.
+      This website does not promise profits, investment returns, or guaranteed token value.
+      Always verify the correct Stellar asset issuer before sending or receiving tokens.
+    </div>
+  </section>
+
+  <footer>
+    Built with ❤️ for the <span>Fox Empire</span> community on Stellar
+  </footer>
+
+  <!-- Albedo Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@albedo-link/intent@0.12/lib/albedo.intent.js"></script>
+
+  <script>
+    function addFoxToWallet() {
+      albedo.trust({
+        asset_code: "FoxXlm",
+        asset_issuer: "GC4JKLX2BSIVAKATWHFXY6JV67IDX6SFNLMCLHOI3UIYVVTZNDOV5HUN"
+      })
+      .then(function(result) {
+        alert("✅ توکن FoxXlm با موفقیت به کیف‌پول اضافه شد!");
+      })
+      .catch(function(error) {
+        alert("عملیات لغو شد یا خطایی رخ داد.");
+        console.error(error);
+      });
+    }
+  </script>
+
+</body>
+</html>
