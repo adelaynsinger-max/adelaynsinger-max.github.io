@@ -9,8 +9,23 @@ ORG_NAME = "FoxXlm"
 ORG_URL = "https://adelaynsinger-max.github.io/FoxXlm/"
 
 [[CURRENCIES]]
-code = "FoxXlm"
+code = "FOXXLM"
 issuer = "GC4JKLX2BSIVAKATWHFXY6JV67IDX6SFNLMCLHOI3UIYVVTZNDOV5HUN"
 name = "FoxXlm"
 desc = "FoxXlm is a Stellar-based digital asset project."
-image = "https://adelaynsinger-max.github.io/logo.png"
+image = "https://adelaynsinger-max.github.io/FoxXlm/foxxlm.png"
+
+[[CURRENCIES]]
+code = "FoxNtv"
+issuer = "GC4JKLX2BSIVAKATWHFXY6JV67IDX6SFNLMCLHOI3UIYVVTZNDOV5HUN"
+name = "FoxNtv"
+desc = "FoxNtv is a Stellar-based digital asset created for the Fox ecosystem."
+image = "https://adelaynsinger-max.github.io/FoxXlm/8209a596-3f4c-441e-bcbc-789a46b75b46.png"
+
+[[CURRENCIES]]
+code = "FOXDARK"
+issuer = "GC4JKLX2BSIVAKATWHFXY6JV67IDX6SFNLMCLHOI3UIYVVTZNDOV5HUN"
+name = "FoxDark"
+desc = "FoxDark is a Stellar-based digital asset project."
+image = "https://adelaynsinger-max.github.io/FoxXlm/darkfox.png"
+display_decimals = 7
